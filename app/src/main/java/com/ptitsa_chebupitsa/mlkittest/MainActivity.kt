@@ -71,10 +71,8 @@ class MainActivity : AppCompatActivity() {
             }
         }, ContextCompat.getMainExecutor(this))
     }
-private var count  = 0
+
     private fun isValidVin(vin: String): Boolean {
-        count++
-        Log.d("MLKitTest", "VIN: $vin")
         // VIN должен быть длиной 17 символов и содержать только буквы и цифры
         return vin.length == 17 && vin.matches(Regex("[A-HJ-NPR-Z0-9]+"))
     }
